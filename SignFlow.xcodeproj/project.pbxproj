@@ -1,0 +1,888 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09D5667E8B16B888ECDEF31C /* AppPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3658556276AF2B2B09DC63B /* AppPackage.swift */; };
+		0D701FF52BB5086E93A7EE9D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09003529B2798793E3CAC728 /* RootView.swift */; };
+		24E3DC7B6A0F9CDC81B0D90A /* TemporaryFileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F06222CEE5F73800302B861 /* TemporaryFileManaging.swift */; };
+		3A19F34BAE5708B1C804FCE2 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34364B9CEE3BCD18CAA895A2 /* AppEnvironment.swift */; };
+		53D5911BFAD7D7BA2DB662D1 /* FutureProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5BEC0DB098AAE47D7D4369 /* FutureProtocols.swift */; };
+		57FAA13B8956CC984F700602 /* IPAImporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE47EE1E153D3BB4CBBF0F /* IPAImporting.swift */; };
+		581302741A1CF320DDFA4C50 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D815F6C18AB5066F1297993 /* AppRouter.swift */; };
+		5AD3F71B5BE4C0BB1522936B /* SignFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE1EF7CDE612A71DEFBBCF /* SignFlowApp.swift */; };
+		5E337D5E52CBFE6651D327C7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 86E4D1E444BB0FB4FA8EFE2E /* PrivacyInfo.xcprivacy */; };
+		69014946C7851D0A06C0507C /* NestedBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1FFE57F99E8F4BD5D23AF5 /* NestedBundle.swift */; };
+		6B36E06A27665E1ED42C7595 /* SignFlowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089FFBC2D72F73F369E22F7 /* SignFlowError.swift */; };
+		6E7D30DE25D6D32137E426C1 /* ArchiveLimitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CDD8B21EC43D347E533462 /* ArchiveLimitsTests.swift */; };
+		7633519322BC170B8DBC9470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C6B7C7C4DA4FDBCE2E6520 /* Assets.xcassets */; };
+		CF609B2FCE983916273E9565 /* ArchiveLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C120EDF1D23B434E327FE80 /* ArchiveLimits.swift */; };
+		DC1706A239323A0F09750727 /* IPAExtracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB7A76BC99158A3CEC20EE3 /* IPAExtracting.swift */; };
+		EC6DC0C4064FDA8954D42A5B /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 818DE0F06E4E0BAA611C55E0 /* ZIPFoundation */; };
+		ECFFDC6E7E7967BF91F5D659 /* IPAInspecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5489743F3913F106725514 /* IPAInspecting.swift */; };
+		F73A8DF894E2040B4A8489BF /* ValidationIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E90177292BF74DFDAC2EB /* ValidationIssue.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88D6E206FACE8C343827840A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68B9374E06A16330FFA54508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56792BD940E81C73EDA555C;
+			remoteInfo = SignFlow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09003529B2798793E3CAC728 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		0FB7A76BC99158A3CEC20EE3 /* IPAExtracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAExtracting.swift; sourceTree = "<group>"; };
+		1827DABF87D40FE7393FC7CA /* SignFlowTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SignFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F06222CEE5F73800302B861 /* TemporaryFileManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryFileManaging.swift; sourceTree = "<group>"; };
+		34364B9CEE3BCD18CAA895A2 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		3D815F6C18AB5066F1297993 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		57C6B7C7C4DA4FDBCE2E6520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C120EDF1D23B434E327FE80 /* ArchiveLimits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLimits.swift; sourceTree = "<group>"; };
+		74FE1EF7CDE612A71DEFBBCF /* SignFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFlowApp.swift; sourceTree = "<group>"; };
+		78DE47EE1E153D3BB4CBBF0F /* IPAImporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAImporting.swift; sourceTree = "<group>"; };
+		86E4D1E444BB0FB4FA8EFE2E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9089FFBC2D72F73F369E22F7 /* SignFlowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFlowError.swift; sourceTree = "<group>"; };
+		936E90177292BF74DFDAC2EB /* ValidationIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationIssue.swift; sourceTree = "<group>"; };
+		9E5BEC0DB098AAE47D7D4369 /* FutureProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureProtocols.swift; sourceTree = "<group>"; };
+		BB5489743F3913F106725514 /* IPAInspecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAInspecting.swift; sourceTree = "<group>"; };
+		D0CDD8B21EC43D347E533462 /* ArchiveLimitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLimitsTests.swift; sourceTree = "<group>"; };
+		D3658556276AF2B2B09DC63B /* AppPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPackage.swift; sourceTree = "<group>"; };
+		E44A1F4B55AA0E0568E96974 /* SignFlow.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SignFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1FFE57F99E8F4BD5D23AF5 /* NestedBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedBundle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A2B68284BA5FA6CF691E4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6DC0C4064FDA8954D42A5B /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		008A42A583C9415F53AB7CC1 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0CDD8B21EC43D347E533462 /* ArchiveLimitsTests.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		07333A17869DBAB56ACF5680 = {
+			isa = PBXGroup;
+			children = (
+				4B786B80FA1660D12EF409D8 /* SignFlow */,
+				BA159BFD00F993302B28736A /* Tests */,
+				B2E36863D38BF8A5BE913C3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07670D0D8FD0E6D00A450707 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		0B4F738DEDC54A2DE142AC5B /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		1877F4F7E0E413A5FCA8346B /* Installation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Installation;
+			sourceTree = "<group>";
+		};
+		1990B7F3ABFEEFBAFF35D406 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				54A41871541136F72280C970 /* Errors */,
+				A80E942479476E59B813BECA /* Models */,
+				ACB8DCCFC6266020B4913F63 /* Protocols */,
+				DAB5197FE4D1934EDFC8A006 /* StateMachines */,
+				6D53CE3C9011C467DDC09018 /* UseCases */,
+				982A656DDE9702CDAC6383CF /* Validation */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2589DA8D6F12140CAD3FD209 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		3383773620F4F7A43F81C887 /* MachO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MachO;
+			sourceTree = "<group>";
+		};
+		37DAEB4A20C85A948CB8BD7B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				73EB5FA4F57D0B7B9C826986 /* AppInspector */,
+				8A52E03EE928BE9968B76F74 /* AppLibrary */,
+				3F70B3B3EBCA406B9F891D70 /* Certificates */,
+				9C33E5DE02736AF1990A8A20 /* Dashboard */,
+				4C3471AB1C19FC30FF9F2443 /* Diagnostics */,
+				506307E6BD01C0C3287A2C7B /* History */,
+				836093D73234268334AFE75B /* ImportIPA */,
+				D1DF6363AC7D3A0C802A7BFC /* Installation */,
+				85BA85A1797E3B73200783F5 /* Onboarding */,
+				5D82AC6FC302A5A80D4B01C1 /* Preflight */,
+				5C538396B63EC20CF4736006 /* ProvisioningProfiles */,
+				74701454741B13B7866CCDC2 /* Settings */,
+				CC022D4BBFCB5AA90902C92C /* Signing */,
+				FDE49FAC1177F9E4FB600FA6 /* SigningSetup */,
+				C7CA4DE8DACD98C243CA8FEF /* Sources */,
+				7E3F2F98A3E4F78336F53AEA /* Verification */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3F70B3B3EBCA406B9F891D70 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		45E82731E58CD1A43F42A1B3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				9349EBEF62C619493511F122 /* Archive */,
+				CF02A4ACB10F109E856B198A /* CodeSigning */,
+				DA3D8BD7A5C355990028BD50 /* Cryptography */,
+				07670D0D8FD0E6D00A450707 /* FileSystem */,
+				1877F4F7E0E413A5FCA8346B /* Installation */,
+				F5BFF96E121B7110388C7AFB /* Keychain */,
+				3383773620F4F7A43F81C887 /* MachO */,
+				EDF4A3268E24A47395C3151E /* MobileProvision */,
+				99F86565829BC007CE799419 /* Networking */,
+				0B4F738DEDC54A2DE142AC5B /* Notifications */,
+				2589DA8D6F12140CAD3FD209 /* Persistence */,
+				E6FD53BE2CB085AFE22FAE30 /* Plist */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		4B786B80FA1660D12EF409D8 /* SignFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A26139B8627CE88C389CEF34 /* App */,
+				1990B7F3ABFEEFBAFF35D406 /* Domain */,
+				37DAEB4A20C85A948CB8BD7B /* Features */,
+				45E82731E58CD1A43F42A1B3 /* Infrastructure */,
+				630FF8510DEBF9ECE7FC2101 /* Resources */,
+				A64B343588A106BDCFD0F9A2 /* Shared */,
+			);
+			path = SignFlow;
+			sourceTree = "<group>";
+		};
+		4C3471AB1C19FC30FF9F2443 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		506307E6BD01C0C3287A2C7B /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		54A41871541136F72280C970 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				9089FFBC2D72F73F369E22F7 /* SignFlowError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		5C538396B63EC20CF4736006 /* ProvisioningProfiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProvisioningProfiles;
+			sourceTree = "<group>";
+		};
+		5D82AC6FC302A5A80D4B01C1 /* Preflight */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Preflight;
+			sourceTree = "<group>";
+		};
+		630FF8510DEBF9ECE7FC2101 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57C6B7C7C4DA4FDBCE2E6520 /* Assets.xcassets */,
+				86E4D1E444BB0FB4FA8EFE2E /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68F7DDE37681D747CBD8DFAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6D53CE3C9011C467DDC09018 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		73EB5FA4F57D0B7B9C826986 /* AppInspector */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppInspector;
+			sourceTree = "<group>";
+		};
+		74701454741B13B7866CCDC2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		77DF097B0AD366FC3AC3E619 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7E3F2F98A3E4F78336F53AEA /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		836093D73234268334AFE75B /* ImportIPA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImportIPA;
+			sourceTree = "<group>";
+		};
+		8395E1E5CED6F2A1B20294C9 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		85BA85A1797E3B73200783F5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8A52E03EE928BE9968B76F74 /* AppLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppLibrary;
+			sourceTree = "<group>";
+		};
+		903219705BCDCA4A22B19427 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		91CB9F71F8FE9FA78DE6BB65 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9349EBEF62C619493511F122 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		982A656DDE9702CDAC6383CF /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		99F86565829BC007CE799419 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9C33E5DE02736AF1990A8A20 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A26139B8627CE88C389CEF34 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				34364B9CEE3BCD18CAA895A2 /* AppEnvironment.swift */,
+				3D815F6C18AB5066F1297993 /* AppRouter.swift */,
+				09003529B2798793E3CAC728 /* RootView.swift */,
+				74FE1EF7CDE612A71DEFBBCF /* SignFlowApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A64B343588A106BDCFD0F9A2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				91CB9F71F8FE9FA78DE6BB65 /* Components */,
+				BF7275110F4054A53B5C42CF /* DesignSystem */,
+				68F7DDE37681D747CBD8DFAC /* Extensions */,
+				C6617339D6E3ABA864F30FE8 /* Logging */,
+				A98570A628C889A2ED225D16 /* Security */,
+				77DF097B0AD366FC3AC3E619 /* Utilities */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A80E942479476E59B813BECA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3658556276AF2B2B09DC63B /* AppPackage.swift */,
+				5C120EDF1D23B434E327FE80 /* ArchiveLimits.swift */,
+				EC1FFE57F99E8F4BD5D23AF5 /* NestedBundle.swift */,
+				936E90177292BF74DFDAC2EB /* ValidationIssue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A98570A628C889A2ED225D16 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		ACB8DCCFC6266020B4913F63 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9E5BEC0DB098AAE47D7D4369 /* FutureProtocols.swift */,
+				0FB7A76BC99158A3CEC20EE3 /* IPAExtracting.swift */,
+				78DE47EE1E153D3BB4CBBF0F /* IPAImporting.swift */,
+				BB5489743F3913F106725514 /* IPAInspecting.swift */,
+				1F06222CEE5F73800302B861 /* TemporaryFileManaging.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B2E36863D38BF8A5BE913C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E44A1F4B55AA0E0568E96974 /* SignFlow.app */,
+				1827DABF87D40FE7393FC7CA /* SignFlowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA159BFD00F993302B28736A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8395E1E5CED6F2A1B20294C9 /* Fixtures */,
+				903219705BCDCA4A22B19427 /* IntegrationTests */,
+				008A42A583C9415F53AB7CC1 /* UnitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BF7275110F4054A53B5C42CF /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		C6617339D6E3ABA864F30FE8 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		C7CA4DE8DACD98C243CA8FEF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CC022D4BBFCB5AA90902C92C /* Signing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signing;
+			sourceTree = "<group>";
+		};
+		CF02A4ACB10F109E856B198A /* CodeSigning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CodeSigning;
+			sourceTree = "<group>";
+		};
+		D1DF6363AC7D3A0C802A7BFC /* Installation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Installation;
+			sourceTree = "<group>";
+		};
+		DA3D8BD7A5C355990028BD50 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
+		DAB5197FE4D1934EDFC8A006 /* StateMachines */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateMachines;
+			sourceTree = "<group>";
+		};
+		E6FD53BE2CB085AFE22FAE30 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		EDF4A3268E24A47395C3151E /* MobileProvision */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MobileProvision;
+			sourceTree = "<group>";
+		};
+		F5BFF96E121B7110388C7AFB /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		FDE49FAC1177F9E4FB600FA6 /* SigningSetup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SigningSetup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F97FA6581B537A0444DAFEE /* SignFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7903D5E4B91E49DDF8A35DB /* Build configuration list for PBXNativeTarget "SignFlowTests" */;
+			buildPhases = (
+				298695A503485B7C6F58B512 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83D5D8B18A2F6EDF187DBB36 /* PBXTargetDependency */,
+			);
+			name = SignFlowTests;
+			packageProductDependencies = (
+			);
+			productName = SignFlowTests;
+			productReference = 1827DABF87D40FE7393FC7CA /* SignFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D56792BD940E81C73EDA555C /* SignFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17CF67AC86DE2421A7D09D2E /* Build configuration list for PBXNativeTarget "SignFlow" */;
+			buildPhases = (
+				7DEF018D3AC2E3E987C2AA7B /* Sources */,
+				42FC073E94E683CCDBD444ED /* Resources */,
+				2A2B68284BA5FA6CF691E4F3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignFlow;
+			packageProductDependencies = (
+				818DE0F06E4E0BAA611C55E0 /* ZIPFoundation */,
+			);
+			productName = SignFlow;
+			productReference = E44A1F4B55AA0E0568E96974 /* SignFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68B9374E06A16330FFA54508 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 9399BE8693EC0187D81E5C23 /* Build configuration list for PBXProject "SignFlow" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 07333A17869DBAB56ACF5680;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				435C66C3DC54AF9189CEA822 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B2E36863D38BF8A5BE913C3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D56792BD940E81C73EDA555C /* SignFlow */,
+				8F97FA6581B537A0444DAFEE /* SignFlowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42FC073E94E683CCDBD444ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7633519322BC170B8DBC9470 /* Assets.xcassets in Resources */,
+				5E337D5E52CBFE6651D327C7 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		298695A503485B7C6F58B512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7D30DE25D6D32137E426C1 /* ArchiveLimitsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DEF018D3AC2E3E987C2AA7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A19F34BAE5708B1C804FCE2 /* AppEnvironment.swift in Sources */,
+				09D5667E8B16B888ECDEF31C /* AppPackage.swift in Sources */,
+				581302741A1CF320DDFA4C50 /* AppRouter.swift in Sources */,
+				CF609B2FCE983916273E9565 /* ArchiveLimits.swift in Sources */,
+				53D5911BFAD7D7BA2DB662D1 /* FutureProtocols.swift in Sources */,
+				DC1706A239323A0F09750727 /* IPAExtracting.swift in Sources */,
+				57FAA13B8956CC984F700602 /* IPAImporting.swift in Sources */,
+				ECFFDC6E7E7967BF91F5D659 /* IPAInspecting.swift in Sources */,
+				69014946C7851D0A06C0507C /* NestedBundle.swift in Sources */,
+				0D701FF52BB5086E93A7EE9D /* RootView.swift in Sources */,
+				5AD3F71B5BE4C0BB1522936B /* SignFlowApp.swift in Sources */,
+				6B36E06A27665E1ED42C7595 /* SignFlowError.swift in Sources */,
+				24E3DC7B6A0F9CDC81B0D90A /* TemporaryFileManaging.swift in Sources */,
+				F73A8DF894E2040B4A8489BF /* ValidationIssue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83D5D8B18A2F6EDF187DBB36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D56792BD940E81C73EDA555C /* SignFlow */;
+			targetProxy = 88D6E206FACE8C343827840A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21D87FA147508886AEEB7DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_GENERATION_MODE = GeneratedFile;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnto.signflow;
+				PRODUCT_NAME = SignFlow;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		905370292078A3280E67C5DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnto.signflow.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignFlow.app/SignFlow";
+			};
+			name = Release;
+		};
+		C1371AD8B2A25BD2178C8305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D6ACC37CCEE066BCC2747CE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9728F62E2FBD763EEC94C5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnto.signflow.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignFlow.app/SignFlow";
+			};
+			name = Debug;
+		};
+		EE204869333021F60A424FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_GENERATION_MODE = GeneratedFile;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnto.signflow;
+				PRODUCT_NAME = SignFlow;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17CF67AC86DE2421A7D09D2E /* Build configuration list for PBXNativeTarget "SignFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE204869333021F60A424FB6 /* Debug */,
+				21D87FA147508886AEEB7DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9399BE8693EC0187D81E5C23 /* Build configuration list for PBXProject "SignFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6ACC37CCEE066BCC2747CE5 /* Debug */,
+				C1371AD8B2A25BD2178C8305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A7903D5E4B91E49DDF8A35DB /* Build configuration list for PBXNativeTarget "SignFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9728F62E2FBD763EEC94C5C /* Debug */,
+				905370292078A3280E67C5DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		435C66C3DC54AF9189CEA822 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		818DE0F06E4E0BAA611C55E0 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 435C66C3DC54AF9189CEA822 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 68B9374E06A16330FFA54508 /* Project object */;
+}
