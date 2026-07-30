@@ -10,6 +10,9 @@ packages:
   ZIPFoundation:
     url: https://github.com/weichsel/ZIPFoundation.git
     exactVersion: "0.9.19"
+  zsign:
+    url: https://github.com/xtool-org/zsign.git
+    branch: master
 
 targets:
   SignFlow:
@@ -19,23 +22,54 @@ targets:
       - SignFlow
     resources:
       - SignFlow/Resources
+    info:
+      path: SignFlow/Info.plist
+      properties:
+        CFBundleDisplayName: SignFlow
+        CFBundleShortVersionString: "0.1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        LSApplicationQueriesSchemes:
+          - itms-services
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.bnto.signflow
         PRODUCT_NAME: SignFlow
-        INFOPLIST_GENERATION_MODE: GeneratedFile
         MARKETING_VERSION: "0.1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_STRICT_CONCURRENCY: complete
         ENABLE_USER_SCRIPT_SANDBOXING: true
+        GENERATE_INFOPLIST_FILE: false
+        CLANG_CXX_LANGUAGE_STANDARD: c++17
     dependencies:
       - package: ZIPFoundation
+      - package: zsign
+        product: Zupersign
 
   SignFlowTests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - Tests
+      - path: Tests
+        excludes:
+          - "**/*.p12"
+          - "**/*.cer"
+          - "**/*.md"
+          - "**/*.mobileprovision"
+    resources:
+      - path: Tests/Fixtures/TestIdentity.p12
+        buildPhase: resources
+      - path: Tests/Fixtures/TestIdentity.cer
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.bnto.signflow.tests

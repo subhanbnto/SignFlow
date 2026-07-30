@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "signflow-installer",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-29",
+  "workers_dev": true,
+  "vars": {
+    "RETENTION_HOURS": "6",
+    "MAX_IPA_BYTES": "524288000"
+  },
+  "r2_buckets": [
+    {
+      "binding": "RELEASES",
+      "bucket_name": "signflow-releases",
+      "preview_bucket_name": "signflow-releases-preview"
+    }
+  ],
+  "triggers": {
+    "crons": ["0 * * * *"]
+  }
+}

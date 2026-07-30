@@ -32,13 +32,20 @@ Package.resolved
 .env
 credentials.json
 
+# Allow synthetic test-only credentials (clearly marked TEST ONLY)
+!Tests/Fixtures/TestIdentity.p12
+!Tests/Fixtures/TestIdentity.cer
+!Tests/Fixtures/*.md
+
 # IDE
 .idea/
 .vscode/
 *.swp
 *~
 
-# Build artifacts
-*.ipa
-*.dSYM.zip
-*.dSYM
+# Installer backend
+InstallerBackend/node_modules/
+InstallerBackend/.wrangler/
+InstallerBackend/dist/
+InstallerBackend/.dev.vars
+

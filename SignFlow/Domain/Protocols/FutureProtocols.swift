@@ -1,35 +1,18 @@
 import Foundation
 
-// MARK: - M2+ Protocols (Certificate & Profile Management)
-
-protocol CertificateImporting: Sendable {
-    func importP12(from url: URL, password: String) async throws
-}
-
-protocol CertificateStoring: Sendable {
-    func listIdentities() async throws -> [SigningIdentity]
-    func deleteIdentity(id: UUID) async throws
-}
-
-protocol ProvisioningProfileParsing: Sendable {
-    func parse(profileURL: URL) async throws -> ProvisioningProfile
-}
-
-// MARK: - M3+ Protocols (Preflight Validation)
+// MARK: - M3 Protocols (Preflight Validation)
 
 protocol SigningAssetValidating: Sendable {
-    func validate(
-        package: AppPackage,
-        identity: SigningIdentity,
-        profiles: [ProvisioningProfile]
-    ) async -> PreflightReport
+    func validate(configuration: SigningConfiguration) async -> PreflightReport
 }
 
 protocol EntitlementResolving: Sendable {
     func resolve(
         requested: [String: Any],
         permitted: [String: Any],
-        strategy: EntitlementStrategy
+        strategy: EntitlementStrategy,
+        bundleIdentifier: String,
+        teamIdentifier: String
     ) -> EntitlementResolutionResult
 }
 
@@ -39,103 +22,99 @@ protocol BundleIdentifierRewriting: Sendable {
         replacement: String,
         nestedBundles: [NestedBundle]
     ) -> [BundleIDMapping]
+
+    func applyMappings(
+        mappings: [BundleIDMapping],
+        toAppBundle appURL: URL
+    ) async throws
 }
 
-// MARK: - M4+ Protocols (Signing)
+// MARK: - M4 Protocols (Signing)
 
 protocol NestedCodeDiscovering: Sendable {
     func discoverNestedCode(in appURL: URL) async throws -> [NestedBundle]
 }
 
 protocol SigningOrderPlanning: Sendable {
-    func planSigningOrder(bundles: [NestedBundle]) -> [SigningUnit]
+    func planSigningOrder(appURL: URL, nestedBundles: [NestedBundle]) -> [SigningUnit]
+}
+
+struct SigningUnit: Identifiable, Sendable, Hashable {
+    let id: UUID
+    let path: URL
+    let relativePath: String
+    let kind: NestedBundleType
+    let order: Int
+    let bundleIdentifier: String?
+
+    init(path: URL, relativePath: String, kind: NestedBundleType, order: Int, bundleIdentifier: String? = nil) {
+        self.id = UUID()
+        self.path = path
+        self.relativePath = relativePath
+        self.kind = kind
+        self.order = order
+        self.bundleIdentifier = bundleIdentifier
+    }
 }
 
 protocol CodeSigning: Sendable {
-    func sign(target: URL, identity: Any, entitlements: Data?) async throws
+    func signAppBundle(
+        at appURL: URL,
+        identity: SigningIdentity,
+        profile: ProvisioningProfile,
+        entitlementPlists: [String: Data],
+        embedProvisioningProfile: Bool,
+        progress: @escaping @Sendable (Double, String) -> Void
+    ) async throws
 }
 
 protocol SignatureVerifying: Sendable {
-    func verify(target: URL) async throws -> VerificationResult
+    func verify(appBundleURL: URL, expectedProfileUUID: String?) async throws -> VerificationReport
 }
 
 protocol IPARepackaging: Sendable {
-    func repackage(appURL: URL, outputURL: URL) async throws -> URL
+    func repackage(
+        payloadParentURL: URL,
+        outputURL: URL,
+        compressionLevel: CompressionLevelSetting
+    ) async throws -> URL
 }
 
-// MARK: - M6+ Protocols (Installation)
+protocol SigningOrchestrating: Sendable {
+    func sign(
+        configuration: SigningConfiguration,
+        progressHandler: @escaping @Sendable (SigningProgress) -> Void
+    ) async throws -> SigningJobResult
+}
+
+// MARK: - M6 Protocols (Installation)
 
 protocol AppInstalling: Sendable {
     var isAvailable: Bool { get async }
     var unavailableReason: String? { get async }
-    func install(ipaURL: URL) async throws
+    func eligibility(for request: InstallationRequest) async -> InstallationEligibility
+    func testConnection() async throws -> String
+    func install(
+        request: InstallationRequest,
+        progressHandler: @escaping @Sendable (InstallationProgress) -> Void
+    ) async throws -> InstallationResult
 }
 
-// MARK: - M7+ Protocols (Sources)
-
-protocol SourceFetching: Sendable {
-    func fetchSources() async throws -> [AppSource]
-}
+// MARK: - M7+ Protocols
 
 protocol SigningHistoryStoring: Sendable {
-    func recordResult(_ result: SigningResult) async throws
-    func listHistory() async throws -> [SigningResult]
+    func recordResult(_ result: SigningJobResult) async throws
+    func listHistory() async throws -> [SigningJobResult]
 }
 
 protocol DiagnosticsExporting: Sendable {
     func exportDiagnostics() async throws -> URL
 }
 
-// MARK: - Placeholder types for future milestones
-
-struct SigningIdentity: Identifiable, Hashable, Sendable {
-    let id: UUID
-    let displayName: String
-    let commonName: String
+protocol AppModifying: Sendable {
+    func apply(options: SigningOptions, toAppBundle appURL: URL, displayName: String) async throws
 }
 
-struct ProvisioningProfile: Identifiable, Hashable, Sendable {
-    let id: UUID
-    let name: String
-    let uuid: String
-}
-
-struct PreflightReport: Sendable {
-    let canSign: Bool
-}
-
-enum EntitlementStrategy: String, Sendable {
-    case strict
-    case permittedSubset
-    case advancedReview
-}
-
-struct EntitlementResolutionResult: Sendable {
-    let resolvedEntitlements: [String: String]
-}
-
-struct BundleIDMapping: Sendable {
-    let original: String
-    let replacement: String
-}
-
-struct SigningUnit: Sendable {
-    let path: String
-    let order: Int
-}
-
-struct VerificationResult: Sendable {
-    let passed: Bool
-}
-
-struct AppSource: Identifiable, Sendable {
-    let id: UUID
-    let name: String
-    let url: URL
-}
-
-struct SigningResult: Identifiable, Sendable {
-    let id: UUID
-    let date: Date
-    let success: Bool
+protocol TweakInjecting: Sendable {
+    func inject(tweakURLs: [URL], intoAppBundle appURL: URL, intoExtensions: Bool) async throws
 }
